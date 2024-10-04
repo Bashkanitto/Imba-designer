@@ -41,13 +41,13 @@ const joblist = [
 
 const Jobs = () => {
 	return (
-		<div className='flex flex-wrap gap-2 w-full'>
+		<div className='flex flex-wrap gap-4 w-full'>
 			{joblist.map(item =>
-				<div className='my-2 w-full md:w-[32%] xl:w-[24%] h:full md:h-[45vh] bg-slate-300' key={item.id}>
-					<img className='w-full h-full hover:brightness-50 transition relative' src={item.img} alt="" />
+				<a href={`/job/${item.id}`} className='my-2 w-full md:w-[32%] xl:w-[24%] h:full md:h-[45vh] bg-slate-300' key={item.id}>
+					<img className=' object-cover w-full h-full hover:brightness-50 transition relative' src={item.img} alt="" />
 					<h5>item.title</h5>
 					<p className='text-slate-400'>item.description</p>
-				</div>
+				</a>
 			)}
 		</div>
 	)
